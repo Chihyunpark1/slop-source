@@ -1,0 +1,107 @@
+name: PR Checks
+
+# Safe automatic checks only. This workflow never merges anything.
+# Every PR is reviewed and merged personally by the maintainer.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  pr-format:
+    # PRs must have Target, Claim, Evidence, and Verification.
+    name: PR format
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR body has all four sections
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          python3 - <<'PY'
+          import os, sys
+          body = os.environ.get("PR_BODY") or ""
+          required = ["target", "claim", "evidence", "verification"]
+          missing = [s for s in required if s not in body.lower()]
+          if missing:
+              print(f"PR body is missing: {', '.join(missing)}")
+              print("Every PR must have Target, Claim, Evidence, and Verification.")
+              sys.exit(1)
+          print("PR body has all four sections: Target, Claim, Evidence, Verification.")
+          PY
+
+  markdown:
+    # Changed Markdown files must have well-formed tables and a heading.
+    name: Markdown check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Check changed Markdown files
+        run: |
+          python3 - <<'PY'
+          import subprocess, sys, re
+
+          files = subprocess.run(
+              ["git", "diff", "--name-only", "HEAD~1", "HEAD"],
+              capture_output=True, text=True
+          ).stdout.splitlines()
+          md = [f for f in files if f.endswith(".md")]
+          if not md:
+              print("No Markdown files changed.")
+              sys.exit(0)
+
+          errors = []
+          for path in md:
+              try:
+                  lines = open(path, encoding="utf-8").read().splitlines()
+              except FileNotFoundError:
+                  continue
+              if not any(l.startswith("#") for l in lines):
+                  errors.append(f"{path}: no heading")
+              in_table = False
+              for i, line in enumerate(lines, 1):
+                  if "|" in line and line.strip().startswith("|"):
+                      if not in_table:
+                          in_table = True
+                          # Next non-empty line must be the separator row.
+                          j = i
+                          while j < len(lines) and not lines[j].strip():
+                              j += 1
+                          if j >= len(lines) or not re.match(
+                              r"^\s*\|[\s\-:|]+\|\s*$", lines[j]
+                          ):
+                              errors.append(
+                                  f"{path}:{i}: table missing a separator row"
+                              )
+                  else:
+                      in_table = False
+
+          if errors:
+              print("Markdown problems:")
+              for e in errors:
+                  print(f"  {e}")
+              sys.exit(1)
+          print(f"Markdown OK in {len(md)} file(s): {', '.join(md)}")
+          PY
+
+  tests:
+    # Run tests only if a test runner is configured. Otherwise pass.
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests if present
+        run: |
+          if [ -f package.json ] && grep -q '"test"' package.json; then
+            echo "Running npm test..."
+            npm test
+          elif [ -d tests ] && ls tests/*.py >/dev/null 2>&1; then
+            echo "Running pytest..."
+            python3 -m pytest tests/ -q
+          else
+            echo "No test runner configured yet — skipping."
+          fi
