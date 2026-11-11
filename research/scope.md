@@ -34,6 +34,27 @@ component of the site.
 The denominator is 14 areas. Current progress is tracked by the
 maintainer and is not published.
 
+## What counts as a contribution
+
+The following work is explicitly permitted in this project:
+
+1. Public contract function and selector analysis.
+2. On-chain data verification.
+3. Platform architecture and behavior analysis.
+4. Independently authored reimplementations based on public code.
+5. Reproducible technical research reports.
+6. Corrections and verification of existing research results.
+
+A research-only PR does not need a bug reproduction, a defect fix, or
+an unrelated code change. One target, one claim, and reproducible
+evidence is enough.
+
+Every research packet must have Target, Claim, Evidence, and
+Verification. A packet template is in
+`research/templates/research-report.md`. For selector claims, use
+`scripts/verify-selector.py` to check the selector against the
+deployed bytecode.
+
 ## Component: SLOP token contract
 
 Analyzed live on Robinhood Chain mainnet (chain ID 4663, public RPC
