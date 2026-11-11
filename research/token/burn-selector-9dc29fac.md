@@ -24,7 +24,7 @@ The function selector `9dc29fac` in the SLOP token dispatcher is
    ```
 
 2. **The selector is in the deployed bytecode.** `9dc29fac` appears
-   exactly once in `research/slop-bytecode.hex`, at byte offset 183,
+   exactly once in `research/slop-bytecode.hex`, at byte offset 182,
    in the dispatcher pattern `PUSH4` (`0x63`) + selector + `EQ`
    (`0x14`):
 
