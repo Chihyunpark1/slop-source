@@ -69,7 +69,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
 
 This project exists because of REALSLOP's story.
 
-The contributor behind this project shipped hundreds of PRs to the slop.cash ecosystem — and was left off the 214-person SLOP contributor allocation list. So he shipped his own slop: **REALSLOP (RSLOP)**, a parody memecoin on Solana. This reverse-engineering project and REALSLOP are sibling projects from the same contributor, not the same work.
+### Origin
+
+The contributor behind this project shipped hundreds of pull requests to the slop.cash ecosystem — bug fixes, research packets, and reviews across eliza, slopdotcash, pumpfun-source, and hyperliquid-source. When the SLOP contributor allocation list was published (PR #2488: 214 recipients, 2,000,000 SLOP total), his name was not on it.
+
+So he shipped his own slop: **REALSLOP (RSLOP)**, a parody memecoin on Solana.
+
+> "The contributor airdrop forgot. The top slop shipper, left off the 214-person list — so he shipped his own. Not affiliated with slop.cash. This is the real slop."
 
 ### Token
 
@@ -83,6 +89,10 @@ The contributor behind this project shipped hundreds of PRs to the slop.cash eco
 | Decimals | 6 |
 | Mint authority | Revoked |
 | Freeze authority | Revoked |
+| Metadata update authority | Creator wallet |
+| Status | Live and tradeable |
+
+The logo is the creator's own handwritten image — "걸어서 코인속으로" ("walking into crypto") — stored on Arweave via Irys. Metadata: https://gateway.irys.xyz/Es6R9Sy9F4sMc7HuVxgFPRXzULvtWue7k5xcCsBD3zg6
 
 ### Allocation
 
@@ -92,9 +102,14 @@ The contributor behind this project shipped hundreds of PRs to the slop.cash eco
 | Liquidity pool (PumpSwap) | 70% | 700,000,000 |
 | Team / dev | 0% | 0 |
 
-The airdrop wallet is `BKyNuXaWNdkg3XwZubdcLtXfzVPtT6dBBcnMcHKy1xMM`. The liquidity pool is on PumpSwap: `5Fv54bu57GUJ47zqPBwyah3btKwpzFAytVrfnpMEVCu8`.
+The airdrop wallet is `BKyNuXaWNdkg3XwZubdcLtXfzVPtT6dBBcnMcHKy1xMM` — recipients are selected by the creator.
+
+The liquidity pool is on PumpSwap: `5Fv54bu57GUJ47zqPBwyah3btKwpzFAytVrfnpMEVCu8` (RSLOP ~696.5M + WSOL ~0.0653 SOL). LP tokens (213.307) are held 100% by the creator wallet.
+
+### Links
 
 - Repository: https://github.com/Chihyunpark1/realslop
+- Token: https://solscan.io/token/5hyubHsUEyAYBeD2AeUL34L9JKTvMPpSaxJY6w1hEvex
 - Not affiliated with SlopDotCash or slop.cash.
 
 ## Get started
