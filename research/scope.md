@@ -39,7 +39,7 @@ maintainer and is not published.
 Analyzed live on Robinhood Chain mainnet (chain ID 4663, public RPC
 `https://rpc.mainnet.chain.robinhood.com`).
 
-| | |
+| Field | Value |
 |---|---|
 | Address | `0xfeb4E36FA4a2A494FF25ae4a63491e4c584A67AE` |
 | Name | Slop Cash |
@@ -70,9 +70,9 @@ off-chain), and mapping it is a follow-on task.
 
 ## Evidence
 
-- Bytecode: `slop-bytecode.hex` (fetched via `eth_getCode`, 2026-11-11)
+- Bytecode: `research/slop-bytecode.hex` (fetched via `eth_getCode`, 2026-11-11)
 - Chain ID confirmed `0x1237` (4663) before reading
 - `totalSupply()`, `name()`, `symbol()`, `decimals()`, `owner()`,
   `paused()` read live via `eth_call`
 - Verification status read from the Blockscout explorer page, 2026-11-11
-- Site inventory from the public codebase clone (`~/workspace/slopdotcash-fork`)
+- Site inventory from the public SLOPCASH codebase (MIT licensed)
