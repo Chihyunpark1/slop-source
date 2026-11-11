@@ -42,6 +42,21 @@ The research scope covers all 14 feature areas of the SLOPCASH
 platform — not only the SLOP token. See
 [research/scope.md](research/scope.md) for the scope definition.
 
+The following work is explicitly permitted in this project:
+
+1. Public contract function and selector analysis.
+2. On-chain data verification.
+3. Platform architecture and behavior analysis.
+4. Independently authored reimplementations based on public code.
+5. Reproducible technical research reports.
+6. Corrections and verification of existing research results.
+
+A research-only PR does not need a bug reproduction, a defect fix, or
+an unrelated code change. One target, one claim, and reproducible
+evidence is enough. Every research PR must include Target, Claim,
+Evidence, and Verification. See [CONTRIBUTING.md](CONTRIBUTING.md)
+and [AGENTS.md](AGENTS.md) for the full instructions.
+
 | Area | What it covers |
 |---|---|
 | Projects | Proposals, leaderboard, setup, risk flags |
