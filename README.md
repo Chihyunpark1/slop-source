@@ -65,11 +65,35 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
 - No verbatim copying of proprietary code. Reconstructions are independently authored.
 - Every behavioral claim cites its on-chain source: transaction, block, or contract call.
 
-## Related project: REALSLOP (RSLOP)
+## REALSLOP (RSLOP)
 
-REALSLOP is a parody memecoin created by the same contributor behind this project, after being left off the 214-person SLOP contributor allocation list. It is a separate project, not part of this reverse-engineering work.
+This project exists because of REALSLOP's story.
 
-- Token: `5hyubHsUEyAYBeD2AeUL34L9JKTvMPpSaxJY6w1hEvex` (Solana)
+The contributor behind this project shipped hundreds of PRs to the slop.cash ecosystem — and was left off the 214-person SLOP contributor allocation list. So he shipped his own slop: **REALSLOP (RSLOP)**, a parody memecoin on Solana. This reverse-engineering project and REALSLOP are sibling projects from the same contributor, not the same work.
+
+### Token
+
+| | |
+|---|---|
+| Name | Real Slop |
+| Ticker | RSLOP |
+| Mint | `5hyubHsUEyAYBeD2AeUL34L9JKTvMPpSaxJY6w1hEvex` |
+| Chain | Solana |
+| Total supply | 1,000,000,000 |
+| Decimals | 6 |
+| Mint authority | Revoked |
+| Freeze authority | Revoked |
+
+### Allocation
+
+| Bucket | Share | Amount |
+|---|---|---|
+| Airdrop | 30% | 300,000,000 |
+| Liquidity pool (PumpSwap) | 70% | 700,000,000 |
+| Team / dev | 0% | 0 |
+
+The airdrop wallet is `BKyNuXaWNdkg3XwZubdcLtXfzVPtT6dBBcnMcHKy1xMM`. The liquidity pool is on PumpSwap: `5Fv54bu57GUJ47zqPBwyah3btKwpzFAytVrfnpMEVCu8`.
+
 - Repository: https://github.com/Chihyunpark1/realslop
 - Not affiliated with SlopDotCash or slop.cash.
 
