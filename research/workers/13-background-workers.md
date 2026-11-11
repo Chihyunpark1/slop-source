@@ -2,7 +2,7 @@
 
 ## Target
 
-The background workers of the public Slop Cash codebase (`SlopDotCash/slopdotcash`, MIT licensed) located in `workers/`. This addresses Issue #18 in area 13 ("Workers") of `research/scope.md`.
+The background workers of the public Slop Cash codebase (`SlopDotCash/slopdotcash`, MIT licensed, commit `1b0a4d8ff1d62efe781ddd69be774531909f8ff2`) located in `workers/`. This addresses Issue #18 in area 13 ("Workers") of `research/scope.md`.
 
 ## Claim
 
@@ -86,7 +86,7 @@ To verify this inventory independently:
    gh api repos/SlopDotCash/slopdotcash/contents/workers --jq '.[].name'
    ```
    Output confirms exactly the 13 worker names listed above.
-2. Verify the documentation and entrypoint for each worker in the canonical source tree at `https://github.com/SlopDotCash/slopdotcash/tree/main/workers/<worker-name>`.
+2. Verify the documentation and entrypoint for each worker in the canonical source tree at `https://github.com/SlopDotCash/slopdotcash/tree/1b0a4d8ff1d62efe781ddd69be774531909f8ff2/workers/<worker-name>`.
 
 ## Notes
 
