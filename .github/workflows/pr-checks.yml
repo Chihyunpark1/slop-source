@@ -101,6 +101,7 @@ jobs:
             npm test
           elif [ -d tests ] && ls tests/*.py >/dev/null 2>&1; then
             echo "Running pytest..."
+            python3 -m pytest --version >/dev/null 2>&1 || python3 -m pip install -q pytest
             python3 -m pytest tests/ -q
           else
             echo "No test runner configured yet — skipping."
