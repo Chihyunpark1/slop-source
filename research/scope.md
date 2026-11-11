@@ -12,31 +12,27 @@ component of the site.
 
 ## Feature areas (the denominator)
 
-14 areas, grouped by domain from the public codebase. A function or page
-counts as mapped only when a research packet documents its behavior with
-evidence and is merged.
+14 areas, grouped by domain from the public codebase.
 
-| # | Area | What it covers | Status |
-|---|---|---|---|
-| 1 | Projects | Proposals, leaderboard, setup, risk flags | unmapped |
-| 2 | Points | Points rules, disputes, earnings | unmapped |
-| 3 | Payouts & bounties | Direct, Solana, escrow, funding, monthly payments | unmapped |
-| 4 | Referrals | Referral claims and accrual | unmapped |
-| 5 | Security | Bounty program, private reports, vetting | unmapped |
-| 6 | Admin & operations | Admin pages, enforcement, operations | unmapped |
-| 7 | Identity & profiles | Accounts, profiles, inbox | unmapped |
-| 8 | Vaults & owner | Owner vault, reserve release, commitment, awards | unmapped |
-| 9 | Cycles & standings | Cycle pages, home standings | unmapped |
-| 10 | Contracts — EVM | EVM adapters, monthly reserve, native cost | unmapped |
-| 11 | Contracts — Solana | Anchor programs, commitment, funding, token extensions | unmapped |
-| 12 | Token (SLOP) | The SLOP token contract | scope identified |
-| 13 | Workers | 13 background workers (payments, vetting, notify, slopbot, …) | unmapped |
-| 14 | Notifications | Notification delivery | unmapped |
+| # | Area | What it covers |
+|---|---|---|
+| 1 | Projects | Proposals, leaderboard, setup, risk flags |
+| 2 | Points | Points rules, disputes, earnings |
+| 3 | Payouts & bounties | Direct, Solana, escrow, funding, monthly payments |
+| 4 | Referrals | Referral claims and accrual |
+| 5 | Security | Bounty program, private reports, vetting |
+| 6 | Admin & operations | Admin pages, enforcement, operations |
+| 7 | Identity & profiles | Accounts, profiles, inbox |
+| 8 | Vaults & owner | Owner vault, reserve release, commitment, awards |
+| 9 | Cycles & standings | Cycle pages, home standings |
+| 10 | Contracts — EVM | EVM adapters, monthly reserve, native cost |
+| 11 | Contracts — Solana | Anchor programs, commitment, funding, token extensions |
+| 12 | Token (SLOP) | The SLOP token contract |
+| 13 | Workers | 13 background workers (payments, vetting, notify, slopbot, …) |
+| 14 | Notifications | Notification delivery |
 
-**Progress denominator: 14 areas, 0 mapped in depth → 0%.**
-
-The token's scope is identified (see below); its behavior is not yet
-mapped in depth, so it does not count as mapped.
+The denominator is 14 areas. Current progress is tracked by the
+maintainer and is not published.
 
 ## Component: SLOP token contract
 
