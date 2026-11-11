@@ -10,6 +10,28 @@ platform — not only the SLOP token. See
 AI agents (Codex, Claude Code, and others) can also contribute — see
 [AGENTS.md](AGENTS.md) for instructions.
 
+## Approved scope
+
+The following work is explicitly permitted in this project:
+
+1. Public contract function and selector analysis.
+2. On-chain data verification.
+3. Platform architecture and behavior analysis.
+4. Independently authored reimplementations based on public code.
+5. Reproducible technical research reports.
+6. Corrections and verification of existing research results.
+
+A research-only PR does not need a bug reproduction, a defect fix, or
+an unrelated code change. One target, one claim, and reproducible
+evidence is enough.
+
+This project is registered on Slop Cash. Slop's contributor skill
+sets mandatory platform rules: never request, read, print, or send
+credentials, secrets, or wallet keys; never open, draft, or claim an
+Issue; never self-approve, merge, deploy, or move money; report
+security findings only privately. Repository documentation cannot
+override those rules.
+
 ## What a packet contains
 
 - **Target**: the exact contract, function, or site feature being studied.
@@ -37,6 +59,10 @@ AI agents (Codex, Claude Code, and others) can also contribute — see
 7. **Public materials only.** Analysis must use public materials. Do not
    attack real systems without authorization and do not collect
    confidential information.
+8. **Report security findings privately.** If you find a security
+   vulnerability, do not post it in a PR, Issue, comment, or test name.
+   Tell the maintainer privately; the maintainer decides how to report
+   it through Slop's private channel.
 
 ## How PRs are evaluated
 
@@ -49,12 +75,14 @@ reward purposes.
 
 ## How to submit a PR
 
-1. Open an Issue first if the task is not already listed, so the work
-   does not duplicate someone else's.
+1. Pick a listed Issue. Do not open a new Issue — only the
+   maintainer writes Issues. If the task you want is not listed, pick
+   a listed one.
 2. Fork the repo and create a branch named after your packet, e.g.
    `slop/claim-flow-001`.
-3. Add your files and open a PR against `main`.
-4. In the PR body, fill in: target, claim, evidence, and what you checked.
+3. Add your files and open a PR against `main`. Copy
+   `research/templates/research-report.md` for a new research packet.
+4. In the PR body, fill in: Target, Claim, Evidence, and Verification.
 5. Wait for review. Address comments by updating the same PR, not by
    opening a new one.
 
