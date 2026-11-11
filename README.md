@@ -65,6 +65,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
 - No verbatim copying of proprietary code. Reconstructions are independently authored.
 - Every behavioral claim cites its on-chain source: transaction, block, or contract call.
 
+## Related project: REALSLOP (RSLOP)
+
+REALSLOP is a parody memecoin created by the same contributor behind this project, after being left off the 214-person SLOP contributor allocation list. It is a separate project, not part of this reverse-engineering work.
+
+- Token: `5hyubHsUEyAYBeD2AeUL34L9JKTvMPpSaxJY6w1hEvex` (Solana)
+- Repository: https://github.com/Chihyunpark1/realslop
+- Not affiliated with SlopDotCash or slop.cash.
+
 ## Get started
 
 Prerequisites: Git, Python 3.10+, and a way to read the chain (a public RPC endpoint for robinhood-mainnet).
