@@ -102,7 +102,7 @@ The logo is the creator's own handwritten image — "걸어서 코인속으로" 
 | Liquidity pool (PumpSwap) | 70% | 700,000,000 |
 | Team / dev | 0% | 0 |
 
-The airdrop wallet is `BKyNuXaWNdkg3XwZubdcLtXfzVPtT6dBBcnMcHKy1xMM` — recipients are selected by the creator.
+The airdrop wallet is `BKyNuXaWNdkg3XwZubdcLtXfzVPtT6dBBcnMcHKy1xMM`. The 30% airdrop goes to people who contribute by writing PRs. There is no private owner allocation — the team/dev share is 0%. The supply is earned by contributing, not held by an owner.
 
 The liquidity pool is on PumpSwap: `5Fv54bu57GUJ47zqPBwyah3btKwpzFAytVrfnpMEVCu8` (RSLOP ~696.5M + WSOL ~0.0653 SOL). LP tokens (213.307) are held 100% by the creator wallet.
 
