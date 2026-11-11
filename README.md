@@ -1,18 +1,19 @@
 # SLOP Source
 
-A private reverse-engineering research project. Not published.
+A reverse-engineering research project. The work is public; how far
+along the build is, is not disclosed.
 
-The purpose is to receive research PRs and measure the overall
-reconstruction progress: how much of the slop.cash site's features have
-been mapped, as a percentage.
+The purpose is to receive research PRs. The maintainer tracks the
+overall progress privately.
 
 ## Target: the site's features
 
 The target is what the slop.cash site does — its features, end to end.
 The SLOP token contract is one component of it, not the whole target.
 
-**Progress: 0/14 areas mapped (0%).** See
-[research/scope.md](research/scope.md) for the scope definition.
+**Scope: 14 areas.** See [research/scope.md](research/scope.md) for the
+scope definition. Progress is tracked by the maintainer and is not
+published.
 
 | Area | Status |
 |---|---|
@@ -45,8 +46,8 @@ yet mapped in depth.
   in our own words and code.
 - **Public sources only.** The platform code is MIT-licensed and public;
   the token bytecode is public on-chain. We use them as references.
-- **Private.** Nothing here is published or shown to the public. This
-  repository exists to collect PRs and track progress.
+- **Progress is private.** How far along the build is, is not disclosed.
+  The maintainer tracks it; it is not published.
 
 ## Contribution and evidence requirements
 
@@ -109,11 +110,10 @@ The liquidity pool is on PumpSwap: `5Fv54bu57GUJ47zqPBwyah3btKwpzFAytVrfnpMEVCu8
 
 ## Get started
 
-This is a private repository. Collaborators clone it, pick a task from
-the scope, gather evidence, and open a PR.
+Clone it, pick a task from the scope, gather evidence, and open a PR.
 
 New project work is MIT licensed; imported materials retain their original terms.
 
 ---
 
-*Not affiliated with SlopDotCash or slop.cash. This is an independent, private research project.*
+*Not affiliated with SlopDotCash or slop.cash. This is an independent research project.*
