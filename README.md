@@ -1,69 +1,64 @@
 # SLOP Source
 
-100% focused on the SLOP token — an independent, open-source reverse-engineering reconstruction.
+A private reverse-engineering research project. Not published.
 
-Progress · Target · Source availability · Get started · Task queue
+The purpose is to receive research PRs and measure the overall
+reconstruction progress: how much of the slop.cash site's features have
+been mapped, as a percentage.
 
-The goal is a public, evidence-backed reconstruction of the SLOP token's on-chain behavior: what the deployed contract does, how claims and registration work, and how the contributor allocation is actually enforced. The platform's own code is already open source; this project maps what the chain says.
+## Target: the site's features
 
-## Progress
+The target is what the slop.cash site does — its features, end to end.
+The SLOP token contract is one component of it, not the whole target.
 
-SLOP token progress: work starting.
+**Progress: 0/14 areas mapped (0%).** See
+[research/scope.md](research/scope.md) for the scope definition.
 
-- **0 research work items** registered so far. The scope below is the starting point, not a result.
-- **0 components** mapped, **0** reconstructed, **0** gates accepted.
-
-These counts are honest starting points. They grow only when a PR lands with evidence.
-
-### Target contract
-
-| | |
+| Area | Status |
 |---|---|
-| Token | SLOP |
-| Address | `0xfeb4E36FA4a2A494FF25ae4a63491e4c584A67AE` |
-| Chain | robinhood-mainnet |
-| Decimals | 18 |
-| Contributor allocation | 2,000,000 SLOP across 214 recipients |
-| Registration closes | 2027-02-08 |
+| Projects | unmapped |
+| Points | unmapped |
+| Payouts & bounties | unmapped |
+| Referrals | unmapped |
+| Security | unmapped |
+| Admin & operations | unmapped |
+| Identity & profiles | unmapped |
+| Vaults & owner | unmapped |
+| Cycles & standings | unmapped |
+| Contracts — EVM | unmapped |
+| Contracts — Solana | unmapped |
+| Token (SLOP) | scope identified |
+| Workers | unmapped |
+| Notifications | unmapped |
 
-The deployed bytecode is public. The first research task is to establish its identity: bytecode hash, whether verified source exists, and which functions the token actually exposes.
+A feature counts as mapped only when a research packet documents its
+behavior with evidence and is merged. The token's scope is identified
+(18 functions, verified contract `VentureToken`); its behavior is not
+yet mapped in depth.
 
-## Target: the SLOP token
+## How this stays legally safe
 
-The SLOP token contract is the only reconstruction target. All active research, implementations, tests and PRs must advance this artifact.
-
-- **Token behavior**: transfer, approval, and any non-standard functions the deployed bytecode contains.
-- **Claim and registration**: how a contributor registers, what the contract checks, and when a claim can be made.
-- **Allocation enforcement**: how the 2,000,000 SLOP contributor allocation is held and released, and what stops it from being spent another way.
-- **Platform surface**: the on-chain calls the slop.cash platform makes, and what they prove about the token.
-
-100% focus does not mean 100% completion. A full behavioral map, an independently authored reconstruction, and whole-contract identity remain open acceptance requirements.
-
-## Public source and private changes
-
-The platform is public. The deployed contract is a separate question.
-
-- **Reuse public code**: the slop.cash platform is open source under the MIT license. Match its exact revision and license terms instead of reinventing it.
-- **Recover deployed behavior**: the token bytecode is public on-chain. Its contents establish behavior, not intent. Public upstream code alone does not establish what the deployed contract does.
-- **Reconstruct contract logic**: claim, registration, and allocation behavior need independently authored implementations and documentation. New implementation must be independently authored or reused under an applicable source license; inferred unlicensed code cannot be copied.
-
-That is why deployed-bytecode findings are reported separately from component completion. They validate observed behavior; they do not finish the reconstruction.
-
-## Next delivery milestones
-
-1. Establish the deployed contract's exact bytecode identity and source availability.
-2. Map the claim and registration flow end to end, with on-chain evidence for each step.
-3. Document the allocation logic: who can move the 2,000,000 SLOP, when, and under what checks.
-4. Deliver an independently authored reconstruction of the token's core behavior, with tests against observed on-chain data.
+- **Document behavior, not code.** We write down what each feature does,
+  from observable behavior and the public codebase. We do not copy source
+  code verbatim.
+- **Independent reconstructions.** Anything we rebuild is written by us,
+  in our own words and code.
+- **Public sources only.** The platform code is MIT-licensed and public;
+  the token bytecode is public on-chain. We use them as references.
+- **Private.** Nothing here is published or shown to the public. This
+  repository exists to collect PRs and track progress.
 
 ## Contribution and evidence requirements
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
 
 - Every PR is a research packet: one target, one claim, evidence attached.
-- No fabricated findings. If the chain does not show it, say so.
-- No verbatim copying of proprietary code. Reconstructions are independently authored.
-- Every behavioral claim cites its on-chain source: transaction, block, or contract call.
+- No fabricated findings. If the evidence does not show it, say so.
+- No verbatim copying of code. Reconstructions are independently authored.
+- Every behavioral claim cites its source: the public codebase, an
+  on-chain transaction, or observed behavior.
+- The maintainer reviews and merges each PR personally. Merged packets
+  move the progress percentage.
 
 ## REALSLOP (RSLOP)
 
@@ -114,17 +109,11 @@ The liquidity pool is on PumpSwap: `5Fv54bu57GUJ47zqPBwyah3btKwpzFAytVrfnpMEVCu8
 
 ## Get started
 
-Prerequisites: Git, Python 3.10+, and a way to read the chain (a public RPC endpoint for robinhood-mainnet).
-
-```sh
-git clone https://github.com/Chihyunpark1/slop-source.git
-cd slop-source
-```
-
-Then pick an open task from the task queue, gather the evidence, and open a PR.
+This is a private repository. Collaborators clone it, pick a task from
+the scope, gather evidence, and open a PR.
 
 New project work is MIT licensed; imported materials retain their original terms.
 
 ---
 
-*Not affiliated with SlopDotCash or slop.cash. This is an independent research project.*
+*Not affiliated with SlopDotCash or slop.cash. This is an independent, private research project.*
