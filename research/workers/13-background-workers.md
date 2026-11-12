@@ -81,9 +81,25 @@ Public source code in `SlopDotCash/slopdotcash` at `workers/` defines the follow
 
 To verify this inventory independently:
 
-1. List the directories in `workers/` of `SlopDotCash/slopdotcash`:
+1. List the directories in `workers/` of `SlopDotCash/slopdotcash` at the pinned commit:
    ```bash
-   gh api repos/SlopDotCash/slopdotcash/contents/workers --jq '.[].name'
+   gh api 'repos/SlopDotCash/slopdotcash/contents/workers?ref=1b0a4d8ff1d62efe781ddd69be774531909f8ff2' --jq '.[].name'
+   ```
+   Observed output:
+   ```text
+   fee-converter
+   identity
+   notify
+   operator-keeper
+   payment-executor
+   payments
+   referral-accrual
+   security-payments
+   slopbot
+   vetting-backup
+   vetting-flags
+   vetting-sandbox
+   vetting
    ```
    Output confirms exactly the 13 worker names listed above.
 2. Verify the documentation and entrypoint for each worker in the canonical source tree at `https://github.com/SlopDotCash/slopdotcash/tree/1b0a4d8ff1d62efe781ddd69be774531909f8ff2/workers/<worker-name>`.
